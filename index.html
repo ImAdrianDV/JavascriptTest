@@ -8,17 +8,18 @@
       <input type="text" id="txtString" onkeyup="reverseText()">
       <h4>Result: <span id="result"></span></h4>
     </div>
-    
-    <script>
+   
+    <script type="text/javascript">
       function reverseText(){
         var txtString = document.getElementById("txtString").value;
-        /*var newString = "";
+        var newString = "";
         var counter = txtString.length - 1;
         while( counter >= 0){
             newString += txtString[counter];
             counter--;
-        }*/
+        }
         document.getElementById("result").innerHTML = txtString;
+      }
     </script>
   </body>
 </html>
