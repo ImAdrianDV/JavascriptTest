@@ -27,12 +27,12 @@
       }
       
       function matchString(){
-        
+        var sample = document.getElementById("sample").innerHTML;
+        var inputString = document.getElementById("txtString2").value;
+        var newString2 = sample.match(/the/g).length;
+        document.getElementById("result2").innerHTML = newString2;
       }
-      var sample = document.getElementById("sample").innerHTML;
-      var inputString = document.getElementById("txtString2").value;
-      var newString2 = sample.match(/the/g).length;
-      document.getElementById("result2").innerHTML;
+      
     </script>
   </body>
 </html>
