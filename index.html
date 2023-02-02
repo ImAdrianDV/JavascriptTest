@@ -30,11 +30,12 @@
         var sample = document.getElementById("sample").innerHTML;
         var inputString2 = document.getElementById("txtString2").value;
         var splitWord = sample.trim().split(" ");
-        var countWord = splitword.lenth()-1;
+        var countWord = splitWord.length-1;
         var totalCount = 0;
         for(var a = 0 ; a <= countWord; a++){
           if(splitWord == inputString2){
             totalCount = totalCount + 1;
+          }
         }
         
         document.getElementById("result2").innerHTML = totalCount;
