@@ -12,13 +12,18 @@
       <p id="sample">The quick brown fox jumps over the lazy dog</p>
       <input type="text" id="txtString2" onkeyup="matchString()">
       <h4>Result: <span id="result2"></span></h4>
+      
+      <br><br>
+      <h1>Email Validation</h1>
+      <input type="text" id="textString3">
+      <input type="submit" onclick="validateEmail()">
     </div>
    
     <script type="text/javascript">
       function reverseText(){
-        var txtString = document.getElementById("txtString").value;
-        var newString = "";
-        var counter = txtString.length - 1;
+        let txtString = document.getElementById("txtString").value;
+        let newString = "";
+        let counter = txtString.length - 1;
         while( counter >= 0){
             newString += txtString[counter];
             counter--;
@@ -27,12 +32,12 @@
       }
       
       function matchString(){
-        var sample = document.getElementById("sample").innerHTML;
-        var inputString2 = document.getElementById("txtString2").value;
-        var splitWord = sample.trim().split(" ");
-        var countWord = splitWord.length-1;
-        var totalCount = 0;
-        for(var a = 0 ; a <= countWord; a++){
+        let sample = document.getElementById("sample").innerHTML;
+        let inputString2 = document.getElementById("txtString2").value;
+        let splitWord = sample.trim().split(" ");
+        let countWord = splitWord.length-1;
+        let totalCount = 0;
+        for(let a = 0 ; a <= countWord; a++){
           if(splitWord[a] == inputString2){
             totalCount = totalCount + 1;
           }
@@ -41,6 +46,15 @@
         document.getElementById("result2").innerHTML = totalCount;
       }
       
+      
+      function validateEmail(){
+        let stringText = document.getElementById("txtString3").value;
+        let regEx = /^[a-zA-Z9-]+@[a-zA-Z9-]/;
+        if(stringText.match(regEx)){
+          alert("Valid Input Email");
+        }else{
+          aler("Invalid Input Email");
+      }
     </script>
   </body>
 </html>
