@@ -7,6 +7,11 @@
       <h1>String Reverse</h1>
       <input type="text" id="txtString" onkeyup="reverseText()">
       <h4>Result: <span id="result"></span></h4>
+      <br><br>
+      <h1>Match String and Count</h1>
+      <p>The quick brown fox jumps over the lazy dog</p>
+      <input type="text" id="txtString2" onkeyup="matchString()">
+      <h4>Result: <span id="result2"></span></h4>
     </div>
    
     <script type="text/javascript">
@@ -19,6 +24,12 @@
             counter--;
         }
         document.getElementById("result").innerHTML = txtString;
+      }
+      
+      function matchString(){
+        var txtString2 = document.getElementById("txtString2").value;
+        var newString2 = /textString2/g.match(txtString2).length;
+        document.getElementById("result2").innerHTML;
       }
     </script>
   </body>
